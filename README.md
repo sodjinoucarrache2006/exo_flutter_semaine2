@@ -1,17 +1,53 @@
-# restau
+# 🍽️ Restaurant App – Flutter
 
-A new Flutter project.
+Application Flutter d’apprentissage qui regroupe les bases UI : formulaires, listes, grilles, navigation par onglets (BottomNavigationBar) et un **processus de commande** avec **Stepper**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Fonctionnalités
 
-A few resources to get you started if this is your first Flutter project:
+- **Accueil (Home)** : liste de plats (cards réutilisables)
+- **Galerie (Gallery)** : grille d’images (GridView)
+- **Profil (Profile)** : formulaire utilisateur (avatar + champs)
+- **Commandes (Order)** : Stepper (Choix du plat → Livraison → Paiement) + confirmation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# exo_flutter_semaine2
+## 🧩 Widgets couverts
+
+- **Formulaires** : `TextFormField`, `DropdownButtonFormField`, `Radio`, `Checkbox`, `Switch`, `Slider`, `showDatePicker`, `showTimePicker`
+- **Listes & Grilles** : `ListView.builder`, `ListView.separated`, `GridView.count`, `GridView.builder`, `GridTile`, `GridTileBar`
+- **Présentation** : `Card`, `InkWell`, `CircleAvatar`, `Container`, `Padding`, `SizedBox`
+- **Navigation** : `BottomNavigationBar`, `Navigator (push/pop)`
+- **Processus** : `Stepper`
+- **Feedback** : `AlertDialog` 
+
+---
+
+## 📂 Arborescence
+
+
+lib/
+│
+├── main.dart # 🚀 Point d’entrée (MaterialApp + thème + nav)
+│
+├── core/
+│ ├── theme.dart # 🎨 Thème global (couleurs, TextTheme, boutons…)
+│ └── constants.dart # 🔑 Constantes (paddings, radius, durées…)
+│
+├── models/
+│ └── meal.dart # 🗂️ Modèle de données d’un plat (+ demoMeals)
+│
+├── pages/
+│ ├── home_page.dart # 🏠 Liste des plats (cards)
+│ ├── gallery_page.dart # 🖼️ Grille d’images
+│ ├── profile_page.dart # 👤 Profil + formulaire
+│ └── order_page.dart # 🧾 Stepper (commande)
+│
+├── widgets/
+│ ├── meal_card.dart # 🍔 Card réutilisable pour un plat
+│ ├── profile_form.dart # 📝 Formulaire du profil (réutilisable)
+│ └── custom_appbar.dart # 🎯 AppBar personnalisée
+│
+└── navigation/
+└── bottom_nav.dart # 🧭 BottomNavigationBar + IndexedStack
